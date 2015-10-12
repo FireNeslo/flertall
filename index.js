@@ -13,11 +13,12 @@ var unntak = require('./unntak.json')
 var endelser = Object.keys(unntak)
 
 function harUnntak(ord) {
-  var lengde = ord.length, endelse
+  var lengde = ord.length, endelse='', slutt=0
   for(var i = 0, l = endelser.length; i<l; i++) {
     endelse = endelser[i]
-    if(ord.indexOf(endelse,lengde - endelse.length) > -1) {
-      return ord.replace(endelse, unntak[endelse])
+    slutt = lengde - endelse.length
+    if(ord.indexOf(endelse, slutt) > -1) {
+      return ord.slice(0, slutt) + unntak[endelse]
     }
   }
 }
