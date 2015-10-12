@@ -16,7 +16,7 @@ flertall('gwarg') === 'gwargeburgel' // > true
 $ npm i -S FireNeslo/flertall
 ```
 
-## Documnetation
+## Documentation
 
 ### flertall(string, [number]) > string
 takes word to pluralize and number (optional) to determine if needed
